@@ -1,12 +1,47 @@
 # SetStocksTransfer
 
-Mit dem Call werden Artikel von einem Lagerplatz auf einen anderen Lagerplatz umgebucht.
+Mit diesem Call kann der Bestand von Artikeln zwischen zwei Lagerplätzen umgebucht werden.
 
 ### Einschränkungen
-* Pro Call können nicht mehr als 25 Umbuchungen vorgenommen werden. Hier gab es langezeit einen Fehler, dass man nur einen Artikel pro Call umbuchen konnte. Gefixt in __v107__ (evtl. auch v106)
+* Pro Call können nicht mehr als __25 Umbuchungen__ vorgenommen werden. **Hier gab es langezeit einen Fehler, dass nur einen Artikel pro Call umgebucht werden konnte. Gefixt in __v107__ (evtl. auch v106)**
+
+### Erklärung
+Paramter in **kursiv** sind optional. __Fettgedruckte__ sind pflicht.
+
+* __SKU__
+** (Stock Keeping Unit) zusammengesetzt aus ArtikelID-PreisID-VariantenID
+** String
+* **EAN**
+** String
+** **optionaler Parameter**
+* __Reason__
+** Umbuchungsgrund (Link zur Tabelle mit möglichen Werten)
+** Integer
+* **CreditorID**
+** Lieferant (?)
+** Integer
+* __CurrentLocation__
+** aktueller Lagerort
+** Array
+* __StorageLocation__
+** Lagerort
+** String
+* __WarehouseID__
+** Lager
+** Integer
+* __NewLocation
+** neuer Lagerort
+** Array
+* __StorageLocation
+** Lagerort
+** String
+* __WarehouseID__
+** Lager
+** Integer
+
 
 ### Beobachtungen
-* 
+
 
 ### PHP-Code
 ```php
