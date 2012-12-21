@@ -28,10 +28,10 @@ Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
 * __WarehouseID__
    * Lager
    * Integer
-* __NewLocation
+* __NewLocation__
    * neuer Lagerort
    * Array
-* __StorageLocation
+* __StorageLocation__
    * Lagerort
    * String
 * __WarehouseID__
