@@ -1,6 +1,6 @@
 # SetStocksTransfer
 
-Mit diesem Call kann der Bestand von Artikeln zwischen zwei Lagerplätzen umgebucht werden.
+Mit diesem Call kann der Warenbestand eines Artikel zwischen zwei Lagerplätzen umgebucht werden.
 
 ### Einschränkungen
 * Pro Call können nicht mehr als __25 Umbuchungen__ vorgenommen werden. **Hier gab es langezeit einen Fehler, dass nur einen Artikel pro Call umgebucht werden konnte. Gefixt in __v107__ (evtl. auch v106)**
@@ -26,7 +26,7 @@ Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
    * Lagerort
    * String
 * __WarehouseID__
-   * Lager
+   * Lager-ID
    * Integer
 * __NewLocation__
    * neuer Lagerort
@@ -35,36 +35,55 @@ Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
    * Lagerort
    * String
 * __WarehouseID__
-   * Lager
+   * Lager-ID
    * Integer
 
 
 ### Beobachtungen
-
+* Der "Standard-Lagerort" eines Lagers hat die *StorageLocation* 0.
+* *PhysicalStock* akzeptiert auch negative Werte.
+* Es heißt *SetStock__s__Transfer* aber *StockTransfer__s__* …
 
 ### PHP-Code
 ```php
-$response = $this->__soapCall('SetStocksTransfer', array(
-   array(
-      'StockTransfers' => array(
-         array(
-            'SKU' => '123-123-123',
-            'EAN' => '1234567890123',
-            'Reason' => 100,
-            'CreditorID' => 5,
-            'PhysicalStock' => 1,
-            'CurrentLocation' => array(
-               'StorageLocation' => '123',
-               'WarehouseID' => 1
+$response = $this->__soapCall(
+   'SetStocksTransfer', array(
+      array(
+         'StockTransfers' => array(
+            array(
+               'SKU' => '123-123-123',
+               'EAN' => '1234567890123',
+               'Reason' => 100,
+               'CreditorID' => 5,
+               'PhysicalStock' => 1,
+               'CurrentLocation' => array(
+                  'StorageLocation' => '123',
+                  'WarehouseID' => 1
+               ),
+               'NewLocation' => array(
+                  'StorageLocation' => '123',
+                  'WarehouseID' => 1
+               )
             ),
-            'NewLocation' => array(
-               'StorageLocation' => '123',
-               'WarehouseID' => 1
-            ),
+            array(
+               'SKU' => '123-123-123',
+               'EAN' => '1234567890123',
+               'Reason' => 100,
+               'CreditorID' => 5,
+               'PhysicalStock' => 1,
+               'CurrentLocation' => array(
+                  'StorageLocation' => '123',
+                  'WarehouseID' => 1
+               ),
+               'NewLocation' => array(
+                  'StorageLocation' => '123',
+                  'WarehouseID' => 1
+               )
+            )            
          )
       )
    )
-));
+);
 ```
 
 ### XML
