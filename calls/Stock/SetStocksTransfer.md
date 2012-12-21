@@ -3,7 +3,7 @@
 Mit diesem Call kann der Warenbestand eines Artikel zwischen zwei Lagerplätzen umgebucht werden.
 
 ### Einschränkungen
-* Pro Call können nicht mehr als __25 Umbuchungen__ vorgenommen werden. **Hier gab es langezeit einen Fehler, dass nur einen Artikel pro Call umgebucht werden konnte. Gefixt in __v107__ (evtl. auch v106)**
+* Pro Call können nicht mehr als __25 Umbuchungen__ vorgenommen werden. *Hier gab es langezeit einen Fehler, dass nur ein Artikel pro Call umgebucht werden konnte. Gefixt in __v107__ (evtl. auch v106)*
 
 ### Erklärung
 Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
@@ -22,27 +22,27 @@ Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
 * __CurrentLocation__
    * aktueller Lagerort
    * Array
-* __StorageLocation__
-   * Lagerort
-   * String
-* __WarehouseID__
-   * Lager-ID
-   * Integer
+   * __StorageLocation__
+      * Lagerort
+      * String
+   * __WarehouseID__
+      * Lager-ID
+      * Integer
 * __NewLocation__
    * neuer Lagerort
    * Array
-* __StorageLocation__
-   * Lagerort
-   * String
-* __WarehouseID__
-   * Lager-ID
-   * Integer
+   * __StorageLocation__
+      * Lagerort
+      * String
+   * __WarehouseID__
+      * Lager-ID
+      * Integer
 
 
 ### Beobachtungen
 * Der "Standard-Lagerort" eines Lagers hat die *StorageLocation* 0.
 * *PhysicalStock* akzeptiert auch negative Werte.
-* Es heißt *SetStock__s__Transfer* aber *StockTransfer__s__* …
+* Es heißt *SetStocksTransfer* aber *StockTransfers* …
 
 ### PHP-Code
 ```php
