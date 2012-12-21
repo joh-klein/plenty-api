@@ -6,38 +6,37 @@ Mit diesem Call kann der Bestand von Artikeln zwischen zwei Lagerplätzen umgebu
 * Pro Call können nicht mehr als __25 Umbuchungen__ vorgenommen werden. **Hier gab es langezeit einen Fehler, dass nur einen Artikel pro Call umgebucht werden konnte. Gefixt in __v107__ (evtl. auch v106)**
 
 ### Erklärung
-Paramter in **kursiv** sind optional. __Fettgedruckte__ sind pflicht.
+Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
 
 * __SKU__
-** (Stock Keeping Unit) zusammengesetzt aus ArtikelID-PreisID-VariantenID
-** String
-* **EAN**
-** String
-** **optionaler Parameter**
+   * (Stock Keeping Unit) zusammengesetzt aus ArtikelID-PreisID-VariantenID
+   * String
+* *EAN*
+   * String
 * __Reason__
-** Umbuchungsgrund (Link zur Tabelle mit möglichen Werten)
-** Integer
-* **CreditorID**
-** Lieferant (?)
-** Integer
+   * Umbuchungsgrund (Link zur Tabelle mit möglichen Werten)
+   * Integer
+* *CreditorID*
+   * Lieferant (?)
+   * Integer
 * __CurrentLocation__
-** aktueller Lagerort
-** Array
+   * aktueller Lagerort
+   * Array
 * __StorageLocation__
-** Lagerort
-** String
+   * Lagerort
+   * String
 * __WarehouseID__
-** Lager
-** Integer
+   * Lager
+   * Integer
 * __NewLocation
-** neuer Lagerort
-** Array
+   * neuer Lagerort
+   * Array
 * __StorageLocation
-** Lagerort
-** String
+   * Lagerort
+   * String
 * __WarehouseID__
-** Lager
-** Integer
+   * Lager
+   * Integer
 
 
 ### Beobachtungen
