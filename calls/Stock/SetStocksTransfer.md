@@ -1,3 +1,14 @@
+# SetStocksTransfer
+
+Mit dem Call werden Artikel von einem Lagerplatz auf einen anderen Lagerplatz umgebucht.
+
+### Einschränkungen
+* Pro Call können nicht mehr als 25 Umbuchungen vorgenommen werden. Hier gab es langezeit einen Fehler, dass man nur einen Artikel pro Call umbuchen konnte. Gefixt in __v107__ (evtl. auch v106)
+
+### Beobachtungen
+* 
+
+### PHP-Code
 ```php
 $response = $this->__soapCall('SetStocksTransfer', array(
    array(
@@ -22,6 +33,7 @@ $response = $this->__soapCall('SetStocksTransfer', array(
 ));
 ```
 
+### XML
 ```xml
 <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://plentymarketsdomain/plenty/api/soap/version106/">
    <soapenv:Header/>
@@ -54,3 +66,6 @@ $response = $this->__soapCall('SetStocksTransfer', array(
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+### Links
+http://man.plentymarkets.eu/soap-api/call-index/setstockstransfer/
