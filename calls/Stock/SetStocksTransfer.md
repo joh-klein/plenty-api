@@ -3,7 +3,7 @@
 Mit diesem Call kann der Warenbestand eines Artikel zwischen zwei Lagerplätzen umgebucht werden.
 
 ### Einschränkungen
-* Pro Call können nicht mehr als __25 Umbuchungen__ vorgenommen werden. *Hier gab es langezeit einen Fehler, dass nur ein Artikel pro Call umgebucht werden konnte. Gefixt in __v107__ (evtl. auch v106)*
+* Pro Call können nicht mehr als __25 Umbuchungen__ vorgenommen werden. *Hier gab es langezeit einen Fehler, dass nur ein Artikel pro Call umgebucht werden konnte. Gefixt in __v107__ (evtl. auch v106).*
 
 ### Erklärung
 Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
@@ -17,7 +17,7 @@ Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
    * Umbuchungsgrund (Link zur Tabelle mit möglichen Werten)
    * Integer
 * *CreditorID*
-   * Lieferant (?)
+   * Lieferant-ID (?)
    * Integer
 * __CurrentLocation__
    * aktueller Lagerort
