@@ -31,6 +31,28 @@ Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
    * Boolean
 
 
+### PHP-Code
+```php
+$response = $this->__soapCall(
+	'SetDynamicImport', array(
+		array(
+			'Content' => array(
+				array (
+					'Value' => 'ItemID;ItemPosition'
+				), array(
+					'Value' => '1234;3'
+				), array(
+					'Value' => '5678;5'
+				)
+			),
+			'FormatID' => 60,
+			'Delimiter' => 3,
+			'OnlyMatching' => true,
+		)            
+ 	)
+);
+```
+
 ### XML
 ```xml
 <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://plentymarketsdomain/plenty/api/soap/version106/">
