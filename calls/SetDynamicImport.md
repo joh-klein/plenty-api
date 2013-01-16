@@ -9,9 +9,6 @@ Mit diesem Call kann ein Dynamischer Import ausgelöst werden
 ### Erklärung
 Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
 
-'Delimiter' => 3,
-'OnlyMatching' => true,
-
 * __Content__
    * 1 Kopfzeile + max. 1000 Datenzeilen
    * Array
@@ -34,3 +31,26 @@ Paramter in *kursiv* sind optional. __Fettgedruckte__ sind pflicht.
    * Boolean
 
 
+### XML
+```xml
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://www.omengo.de/plenty/api/soap/version106/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ver:SetDynamicImport soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <oPlentySoapRequest_SetDynamicImport xsi:type="ver:PlentySoapRequest_SetDynamicImport">
+            <!--You may enter the following 5 items in any order-->
+            <FormatID xsi:type="xsd:int">?</FormatID>
+            <FormatName xsi:type="xsd:string">?</FormatName>
+            <Delimiter xsi:type="xsd:int">?</Delimiter>
+            <OnlyMatching xsi:type="xsd:boolean">?</OnlyMatching>
+            <Content xsi:type="ver:ArrayOfPlentysoapobject_string">
+               <!--Zero or more repetitions:-->
+               <item xsi:type="ver:PlentySoapObject_String">
+                  <Value xsi:type="xsd:string">?</Value>
+               </item>
+            </Content>
+         </oPlentySoapRequest_SetDynamicImport>
+      </ver:SetDynamicImport>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
