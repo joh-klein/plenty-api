@@ -37,7 +37,7 @@ $response = $this->__soapCall(
 	'SetDynamicImport', array(
 		array(
 			'Content' => array(
-				array (
+				array(
 					'Value' => 'ItemID;ItemPosition'
 				), array(
 					'Value' => '1234;3'
