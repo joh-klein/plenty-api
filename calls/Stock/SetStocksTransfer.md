@@ -89,7 +89,12 @@ $response = $this->__soapCall(
 ### XML
 ```xml
 <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://plentymarketsdomain/plenty/api/soap/version106/">
-   <soapenv:Header/>
+   <soapenv:Header>
+      <ns2:verifyingToken>
+         <UserID>1</UserID>
+         <Token>abc</Token>
+      </ns2:verifyingToken>
+   </soapenv:Header>
    <soapenv:Body>
       <ver:SetStocksTransfer soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
          <oPlentySoapRequest_SetStocksTransfer xsi:type="ver:PlentySoapRequest_SetStocksTransfer">
